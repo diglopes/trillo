@@ -77,6 +77,10 @@
     &:hover {
       background-color: $color-grey-light-2;
     }
+
+    &:active {
+      background-color: $color-grey-light-3;
+    }
   }
 
   &__icon-box {
@@ -178,4 +182,16 @@
   color: $color-grey-light-4;
   text-align: center;
   padding: 2.5rem;
+}
+
+///////////////////////////////////////////////////
+//////  Gallery
+
+.gallery {
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block;
+  }
 }

@@ -75,6 +75,8 @@ body {
     align-items: center; }
     .user-nav > *:hover {
       background-color: #f4f2f2; }
+    .user-nav > *:active {
+      background-color: #f0eeee; }
   .user-nav__icon-box {
     position: relative; }
   .user-nav__icon {
@@ -142,6 +144,12 @@ body {
   color: #ccc;
   text-align: center;
   padding: 2.5rem; }
+
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
 
 .container {
   max-width: 120rem;
