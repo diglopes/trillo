@@ -268,14 +268,39 @@
   padding-bottom: 2px;
   display: inline-block;
   cursor: pointer;
+  position: relative;
+
+  & span {
+    position: absolute;
+    top: 0;
+    right: -2rem;
+  }
 
   &:hover {
     color: $color-grey-dark-1;
+
+    span {
+      animation: arrow 0.5s infinite;
+    }
   }
 
   &:focus {
     outline: none;
     animation: pulsate 1s infinite;
+  }
+
+  @keyframes arrow {
+    0% {
+      right: -2rem;
+    }
+
+    50% {
+      right: -2.5rem;
+    }
+
+    100% {
+      right: -2rem;
+    }
   }
 }
 
