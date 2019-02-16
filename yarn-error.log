@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add postcss-cli autoprefixer
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add --dev gh-pages
 
 PATH: 
   C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Diego\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python27;C:\Python27\Scripts;C:\ProgramData\Boxstarter;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\QuickTime\QTSystem;C:\Program Files (x86)\Yarn\bin;C:\Program Files\MongoDB\Server\4.0\bin;C:\Android\Sdk\platform-tools;C:\Android\Sdk\tools;C:\Program Files\Java\jdk1.8.0_201\bi;.;C:\Users\Diego\AppData\Local\Microsoft\WindowsApps;C:\Users\Diego\AppData\Roaming\npm;C:\Users\Diego\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Diego\AppData\Local\Yarn\bin;C:\Android\Sdk\platform-tools;C:\Android\Sdk\tools
@@ -14,14 +14,14 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'D:\Sites Treino\trillo\node_modules\node-sass\vendor\win32-x64-64\binding.node'
+  Error: EPERM: operation not permitted, unlink 'D:\Sites Treino\trillo\node_modules\fsevents\src'
 
 npm manifest: 
   {
     "name": "Trillo",
     "version": "1.0.0",
-    "description": "Trillo app",
-    "main": "index.js",
+    "description": "Aplicação para treinamento de Flexbox",
+    "main": "index.html",
     "scripts": {
       "watch:sass": "node-sass sass/main.scss css/style.css -w",
       "devserver": "live-server",
@@ -29,15 +29,21 @@ npm manifest:
       "compile:sass": "node-sass sass/main.scss css/style.comp.css",
       "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
       "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-      "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+      "build:css": "npm-run-all compile:sass prefix:css compress:css"
     },
-    "author": "Jonas",
+    "author": "Diego Lopes",
     "license": "ISC",
     "devDependencies": {
-      "autoprefixer": "^7.1.4",
-      "concat": "^1.0.3",
+      "autoprefixer": "^7.2.6",
+      "gulp": "^4.0.0",
+      "gulp-autoprefixer": "^6.0.0",
+      "gulp-clean-css": "^4.0.0",
+      "gulp-imagemin": "^5.0.3",
+      "gulp-postcss": "^8.0.0",
+      "gulp-sourcemaps": "^2.6.4",
       "node-sass": "^4.5.3",
       "npm-run-all": "^4.1.1",
+      "postcss": "^7.0.14",
       "postcss-cli": "^4.1.1"
     }
   }
