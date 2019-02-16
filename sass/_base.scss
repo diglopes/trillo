@@ -16,6 +16,18 @@ $shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 
 $line: 1px solid $color-grey-light-2;
 
+$bp-largest: 75em; //1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 58.75em; // 940px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+@mixin responsive($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +42,10 @@ $line: 1px solid $color-grey-light-2;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
+
+  @include responsive($bp-large) {
+    font-size: 50%;
+  }
 }
 
 body {
